@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "763282603605",
+    "project_id": "flutterfly-10c47",
+    "storage_bucket": "flutterfly-10c47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763282603605:android:9aba35e11ebb7e66ef5edc",
+        "android_client_info": {
+          "package_name": "com.example.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763282603605-35tk9iq42as15phnigdp2bblftc0i2kq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quiz",
+            "certificate_hash": "43d868cd145b452e876629ffb171ac548982c86e"
+          }
+        },
+        {
+          "client_id": "763282603605-3gkojdulkulsv5m346s1lc1h18kgvc1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quiz",
+            "certificate_hash": "420a201afa8afa3ebd67dac514bdcce015d90074"
+          }
+        },
+        {
+          "client_id": "763282603605-6f4tk3hfj5ufeert0kd0ska2jratqu1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl3yXmKzqyJ7z9zKZoXPe1EfvsP2HEQvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763282603605-6f4tk3hfj5ufeert0kd0ska2jratqu1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
