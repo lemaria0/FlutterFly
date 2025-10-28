@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:quiz/data/repositories/login_repository.dart';
+import 'package:quiz/ui/home/home_screen.dart';
 import 'package:quiz/ui/login/login_screen.dart';
 import 'package:quiz/ui/login/login_view_model.dart';
 
@@ -43,12 +44,13 @@ class MyApp extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: LoginScreen(
-              viewModel: LoginViewModel(
-                loginRepository: context.read<LoginRepository>(),
-              ),
+            theme: ThemeData(
+              fontFamily: 'Roboto',
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+              useMaterial3: true,
             ),
+            debugShowCheckedModeBanner: false,
+            home: HomeScreen(),
             routes: appRoutes,
           );
         },
