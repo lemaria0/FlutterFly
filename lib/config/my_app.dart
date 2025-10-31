@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import 'package:quiz/data/repositories/login_repository.dart';
@@ -13,6 +14,7 @@ import 'package:quiz/config/routes.dart';
 import 'package:quiz/data/services/auth_service.dart';
 import 'package:quiz/data/services/database_service.dart';
 import 'package:quiz/data/services/shared_preferences_service.dart';
+import 'package:quiz/ui/quiz/quiz_screen.dart';
 
 // Repositories
 //import 'package:quiz/data/repositories/login_repository.dart';
@@ -45,12 +47,14 @@ class MyApp extends StatelessWidget {
         builder: (context) {
           return MaterialApp(
             theme: ThemeData(
-              fontFamily: 'Roboto',
+              textTheme: GoogleFonts.robotoTextTheme(
+                Theme.of(context).textTheme,
+              ),
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
               useMaterial3: true,
             ),
             debugShowCheckedModeBanner: false,
-            home: HomeScreen(),
+            home: QuizScreen(),
             routes: appRoutes,
           );
         },
