@@ -1,16 +1,14 @@
 import "package:flutter/material.dart";
 import "package:flutter_svg/flutter_svg.dart";
 
-class RankingScreen extends StatefulWidget {
-  const RankingScreen({super.key});
+class RankingScreenEmpty extends StatefulWidget {
+  const RankingScreenEmpty({super.key});
 
   @override
-  State<RankingScreen> createState() => _RankingScreenState();
+  State<RankingScreenEmpty> createState() => _RankingScreenEmptyState();
 }
 
-class _RankingScreenState extends State<RankingScreen> {
-  final String posicao = "10";
-  final String pontos = "100";
+class _RankingScreenEmptyState extends State<RankingScreenEmpty> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +29,7 @@ class _RankingScreenState extends State<RankingScreen> {
               ),
             ),
             Text(
-              "$posicao",
+              "?",
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.white,
@@ -40,7 +38,7 @@ class _RankingScreenState extends State<RankingScreen> {
               ),
             ),
             Text(
-              "$pontos pontos",
+              "Responda para descobrir!",
               textAlign: TextAlign.center,
               style: const TextStyle(
                 color: Colors.white,
@@ -81,89 +79,66 @@ class _RankingScreenState extends State<RankingScreen> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 25),
+          padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    children: [
-                      SizedBox(height: 45),
-                      CircleAvatar(
-                        radius: 32,
-                        backgroundImage: AssetImage(
-                          "assets/logo/avatar_placeholder_img.png",
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      SvgPicture.asset(
-                        "assets/logo/rectangleSecond.svg",
-                        width: 80,
-                        height: 150,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 32,
-                        backgroundImage: AssetImage(
-                          "assets/logo/avatar_placeholder_img.png",
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      SvgPicture.asset(
-                        "assets/logo/rectangleFirst.svg",
-                        width: 80,
-                        height: 195,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      SizedBox(height: 83),
-                      CircleAvatar(
-                        radius: 32,
-                        backgroundImage: AssetImage(
-                          "assets/logo/avatar_placeholder_img.png",
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      SvgPicture.asset(
-                        "assets/logo/rectangleThird.svg",
-                        width: 80,
-                        height: 112,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(height: 24),
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+                  SizedBox(height: 100),
                   SvgPicture.asset(
-                    "assets/logo/second.svg",
-                    width: 42,
-                    height: 48,
+                    "assets/logo/time.svg",
+                    width: 25,
+                    height: 25,
                   ),
-                  SvgPicture.asset(
-                    "assets/logo/first.svg",
-                    width: 42,
-                    height: 48,
+                  SizedBox(height: 20),
+                  Text(
+                    "Parece que ninguém respondeu ao quiz ainda...\n Seja o primeiro a entrar no nosso ranking!",
+                    style: TextStyle(fontSize: 14),
+                    textAlign: TextAlign.center,
                   ),
-                  SvgPicture.asset(
-                    "assets/logo/third.svg",
-                    width: 42,
-                    height: 48,
+                  SizedBox(height: 75),
+                  Container(
+                    width: double.infinity,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF02539A),
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0xFF02539A),
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        print('Está funcionando');
+                      },
+                      label: Text(
+                        'Iniciar Quiz',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF3BBEEE),
+                        padding: const EdgeInsets.symmetric(vertical: 1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        elevation: 4,
+                        shadowColor: Color(0xFF02539A),
+                      ),
+                    ),
                   ),
                 ],
               ),
               Spacer(),
               Padding(
-                padding: EdgeInsetsGeometry.symmetric(horizontal: 25),
+                padding: EdgeInsetsGeometry.symmetric(horizontal: 50),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

@@ -15,6 +15,9 @@ import 'package:quiz/data/services/auth_service.dart';
 import 'package:quiz/data/services/database_service.dart';
 import 'package:quiz/data/services/shared_preferences_service.dart';
 import 'package:quiz/ui/quiz/quiz_screen.dart';
+import 'package:quiz/ui/ranking/ranking_screen.dart';
+import 'package:quiz/ui/ranking/ranking_screen_empty.dart';
+import 'package:quiz/ui/ranking/ranking_screen_result.dart';
 
 // Repositories
 //import 'package:quiz/data/repositories/login_repository.dart';
@@ -54,7 +57,7 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ),
             debugShowCheckedModeBanner: false,
-            home: QuizScreen(),
+            home: RankingScreenResult(),
             routes: appRoutes,
           );
         },
